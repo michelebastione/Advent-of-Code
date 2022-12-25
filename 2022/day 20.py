@@ -1,11 +1,3 @@
-prova="""1
-2
--3
-3
--2
-0
-4""".splitlines()
-
 with open('input20.txt') as file:
     coordinates = [int(line) for line in file]
 
@@ -34,7 +26,7 @@ def mix(numbers, cycles=1):
 # solution 1
 print(mix(coordinates))
 
-# solution 2
+# solution 2 does not work yet :'(
 decryption_key = 811589153
 new_coordinates = [*map(lambda x: x * decryption_key, coordinates)]
 print(mix(new_coordinates, 10))
